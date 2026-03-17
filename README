@@ -1,6 +1,6 @@
 # 🐉 Dungeons & Dragons - OOP RPG Game
 
-![Banner Image Placeholder](https://imgur.com/a/Kx94Rgv)
+![Banner Image Placeholder](https://github.com/Gildfx2/Dungeons_And_Dragons/blob/233d52dd57d3fc6cc94276c8e0cbd6e316d3d8c3/D%26D_main.png)
 
 A turn-based 2D dungeon crawler RPG developed in **Java**. This project was built with a strong emphasis on **Object-Oriented Programming (OOP) principles, clean architecture, and standard Design Patterns**. It features a robust game engine decoupled from the user interface, supporting complex combat mechanics, diverse character classes, and dynamic enemy AI.
 
