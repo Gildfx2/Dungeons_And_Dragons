@@ -25,8 +25,10 @@ public class InfoPanel extends JPanel {
     private final Color TEXT_COLOR = new Color(230, 230, 230);
 
     public InfoPanel() {
-        setLayout(new BorderLayout(15, 0));
-        setPreferredSize(new Dimension(800, 250));
+
+        setLayout(new BorderLayout(30, 0));
+
+        setPreferredSize(new Dimension(800, 320));
         setBackground(Color.BLACK);
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
@@ -42,10 +44,11 @@ public class InfoPanel extends JPanel {
 
         // Stats area
         statsPanel = new JPanel();
-        statsPanel.setLayout(new GridLayout(4, 1, 0, 8));
+        statsPanel.setLayout(new GridLayout(4, 1, 0, 15));
         statsPanel.setBackground(BACKGROUND_COLOR);
         statsPanel.setBorder(rpgBorder);
-        statsPanel.setPreferredSize(new Dimension(420, 230));
+
+        statsPanel.setPreferredSize(new Dimension(480, 300));
 
         JPanel atkDefRow = new JPanel(new BorderLayout());
         atkDefRow.setOpaque(false);
@@ -86,7 +89,7 @@ public class InfoPanel extends JPanel {
         levelExpRow.add(levelLabel, BorderLayout.WEST);
         levelExpRow.add(expLabel, BorderLayout.EAST);
 
-        // Add rows to panel in the exact order you requested
+        // Add rows to panel
         statsPanel.add(atkDefRow);
         statsPanel.add(hpRow);
         statsPanel.add(resRow);
@@ -96,7 +99,7 @@ public class InfoPanel extends JPanel {
         messageLog = new JTextPane();
         messageLog.setEditable(false);
         messageLog.setBackground(BACKGROUND_COLOR);
-        messageLog.setMargin(new Insets(10, 15, 10, 15));
+        messageLog.setMargin(new Insets(15, 20, 15, 20));
 
         SimpleAttributeSet paragraphStyle = new SimpleAttributeSet();
         StyleConstants.setLineSpacing(paragraphStyle, 0.4f);
@@ -132,7 +135,6 @@ public class InfoPanel extends JPanel {
         JLabel label = new JLabel(title);
         label.setFont(customFont.deriveFont(18f));
         label.setForeground(TEXT_COLOR);
-        // התיקון: נתנו 140 פיקסלים במקום 100 כדי ששום מילה לא תיחתך!
         label.setPreferredSize(new Dimension(140, 40));
         row.add(label, BorderLayout.WEST);
         return row;
