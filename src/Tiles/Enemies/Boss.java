@@ -56,6 +56,13 @@ public class Boss extends Monster implements HeroicUnit {
             else if(randomMove==MOVE_RIGHT)
                 newPosition = getPosition().add(1,0);
         }
+
+        if (newPosition.getX() > getPosition().getX()) {
+            this.setFacingRight(true);
+        } else if (newPosition.getX() < getPosition().getX()) {
+            this.setFacingRight(false);
+        }
+
         return newPosition;
     }
 

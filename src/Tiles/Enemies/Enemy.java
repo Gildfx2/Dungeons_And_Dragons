@@ -14,6 +14,7 @@ public abstract class Enemy extends Unit {
     protected int experienceValue;
     protected GetPlayerCallBack playerCallBack;
     protected EnemyDeathCallBack deathCallBack;
+    protected boolean facingRight = true;
 
 
 
@@ -58,4 +59,13 @@ public abstract class Enemy extends Unit {
     public void onDeath(){
         deathCallBack.Call();
     }
+
+    public boolean isFacingRight() {
+        return facingRight;
+    }
+
+    public void setFacingRight(boolean facingRight) {
+        this.facingRight = facingRight;
+    }
+
 }

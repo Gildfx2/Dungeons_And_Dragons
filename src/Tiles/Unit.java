@@ -31,8 +31,10 @@ public abstract class Unit extends Tile implements Visitor {
     /// Combat
     public void battle(Unit defender){
         messageCallBack.send(String.format("%s engaged in combat with %s", getName(), defender.getName()));
-        messageCallBack.send(describe());
-        messageCallBack.send(defender.describe());
+
+        // messageCallBack.send(describe());
+        // messageCallBack.send(defender.describe());
+
         int attackPoints = attack();
         int defensePoints = defender.defense();
 
@@ -44,22 +46,24 @@ public abstract class Unit extends Tile implements Visitor {
     public int attack(){
         Random random = new Random();
         int attackRolled = random.nextInt(getAttack()+1);
-        messageCallBack.send(String.format("%s rolled %d attack points", getName(), attackRolled));
+
+        //messageCallBack.send(String.format("%s rolled %d attack points", getName(), attackRolled));
+
         return attackRolled;
     }
 
     public int defense(){
         Random random = new Random();
         int defenseRolled = random.nextInt(getDefense()+1);
-        messageCallBack.send(String.format("%s rolled %d defense points", getName(), defenseRolled));
+
+        //messageCallBack.send(String.format("%s rolled %d defense points", getName(), defenseRolled));
+
         return defenseRolled;
     }
 
     public void interact(Tile tile){
         tile.accept(this);
     }
-
-
 
 
     public void swapPosition(Tile other){

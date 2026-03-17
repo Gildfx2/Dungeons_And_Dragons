@@ -1,5 +1,7 @@
 package Game;
 
+import CLI.InputQuery;
+import Callbacks.MessageCallBack;
 import Utils.Position;
 import Tiles.Enemies.Enemy;
 import Tiles.Players.Player;
@@ -25,10 +27,14 @@ public class FileParser {
     private Player player;
     private List<Enemy> enemies = new ArrayList<>();
     private Position startingPosition;
+    private MessageCallBack messageCallback;
+    private InputQuery inputQuery;
 
-    public FileParser(TileFactory factory, int index) {
+    public FileParser(TileFactory factory, int index, MessageCallBack msgCb, InputQuery input) {
         this.tileFactory = factory;
         this.playerIndex = index;
+        this.messageCallback = msgCb;
+        this.inputQuery = input;
     }
 
     private char[][] charArrayParser(File file) throws IOException {
@@ -62,14 +68,14 @@ public class FileParser {
                     startingPosition = tilePosition;
                     if(player==null) {
                         player = tileFactory.producePlayer(playerIndex, tilePosition);
-                        player.setMessageCallBack(UserInterface::Display);
-                        player.setInputQuery(UserInterface::getAction);
+                        player.setMessageCallBack(messageCallback);
+                        player.setInputQuery(inputQuery);
                     }
                     tile = player;
                 }
                 else{
                     Enemy e = tileFactory.produceEnemy(c, tilePosition);
-                    e.setMessageCallBack(UserInterface::Display);
+                    e.setMessageCallBack(messageCallback);;
                     enemies.add(e);
                     tile = e;
                 }

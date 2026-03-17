@@ -10,7 +10,6 @@ public class Hunter extends Player {
     private int range;
     private int arrowsCount;
     private int ticksCount ;
-    private static final String specialAbilityName = "Shoot";
     private static final int HUNTER_ATTACK_BONUS=2;
     private static final int HUNTER_DEFENSE_BONUS=1;
     private static final int ARROWS_BONUS = 10;
@@ -21,6 +20,7 @@ public class Hunter extends Player {
         this.range = range;
         ticksCount =0;
         arrowsCount = 10 * level;
+        specialAbilityName = "Shoot Arrow";
     }
 
     protected int gainDefense(){
@@ -72,7 +72,7 @@ public class Hunter extends Player {
 
             if(closestEnemy!=null){
                 arrowsCount = arrowsCount - 1;
-                messageCallBack.send(String.format("%s fired an arrow at %s.", getName(), specialAbilityName));
+                messageCallBack.send(String.format("%s fired an arrow at %s.", getName(), closestEnemy.getName()));
                 int defensePoints = closestEnemy.defense();
                 int actualAttack = Math.max(0, attack - defensePoints);
                 messageCallBack.send(String.format("%s hit %s for %d ability damage.",getName(), closestEnemy.getName(), actualAttack));

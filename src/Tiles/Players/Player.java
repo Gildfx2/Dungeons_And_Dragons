@@ -20,6 +20,7 @@ public abstract class Player extends Unit implements HeroicUnit {
     protected static final int HEALTH_BONUS=10;
 
 
+
     public int getExperience() {
         return experience;
     }
@@ -29,9 +30,14 @@ public abstract class Player extends Unit implements HeroicUnit {
         return level;
     }
 
+    public String getSpecialAbilityName(){
+        return specialAbilityName;
+    }
 
+    protected String specialAbilityName;
     protected int experience;
     protected int level;
+
 
     protected InputQuery inputProvider;
     protected EnemiesInRangeCallBack enemiesInRangeCallBack;
@@ -130,8 +136,6 @@ public abstract class Player extends Unit implements HeroicUnit {
     public void visit(Wall wall){}
     public void visit(Player player){}
     public void accept(Visitor v){v.visit(this);}
-
-
 
 
     public void setEnemiesInRangeCallBack(EnemiesInRangeCallBack enemiesInRangeCallBack) {

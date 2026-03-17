@@ -15,13 +15,13 @@ public class Warrior extends Player {
     private static final int WARRIOR_ABILITY_BONUS=10;
     private static final int WARRIOR_ABILITY_DAMAGE_PERCENTAGE=10;
     private static final int WARRIOR_SPECIAL_ABILITY_RANGE=3;
-    private static final String specialAbilityName="Avenger's Shield";
 
 
     public Warrior(String name, int healthCapacity, int attack, int defense, int abilityCoolDown ) {
         super(null, name, new Resource(healthCapacity,healthCapacity), attack, defense);
         this.abilityCoolDown = abilityCoolDown;
         remainingCoolDown = 0;
+        specialAbilityName = "Avenger's Shield";
     }
 
 

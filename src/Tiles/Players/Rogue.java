@@ -13,12 +13,12 @@ public class Rogue extends Player {
     private static final int ROUGE_MAX_ENERGY=100;
     private static final int ROUGE_ENERGY_BONUS=10;
     private static final int ROUGE_SPECIAL_ABILITY_RANGE=2;
-    private static final String specialAbilityName = "Fan of Knives";
 
     public Rogue(String name, int healthCapacity, int attack, int defense, int cost) {
         super(null , name, new Resource(healthCapacity,healthCapacity), attack, defense);
         this.cost = cost;
         this.currentEnergy = ROUGE_MAX_ENERGY;
+        specialAbilityName = "Fan of Knives";
     }
 
     @Override

@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Random;
 
 public class Mage extends Player {
-    private static final String specialAbilityName = "Blizzard";
     private static final int MAGE_MANA_CAPACITY_BONUS=25;
     private static final int MAGE_MANA_AMOUNT_BONUS=4;
     private static final int MAGE_SPELL_POWER_BONUS=10;
@@ -29,6 +28,7 @@ public class Mage extends Player {
         this.spellPower = spellPower;
         this.hitsCount = hitsCount;
         this.abilityRange = abilityRange;
+        specialAbilityName = "Blizzard";
     }
 
     @Override
