@@ -44,7 +44,7 @@ The presentation layer translates the backend logic into a visually engaging exp
 <p align="center">
   <strong>Main Menu</strong><br>
   <em>Hero selection screen with class details.</em><br>
-  <img src="Insert_Link_To_Main_Menu_Screenshot" width="85%">
+  <img src="https://github.com/Gildfx2/Dungeons_And_Dragons/blob/58b743a6c1c9058290b3737aef81cd3fd312fe2c/main_menu_img.png" width="85%">
 </p>
 
 <br>
@@ -52,7 +52,7 @@ The presentation layer translates the backend logic into a visually engaging exp
 <p align="center">
   <strong>Gameplay & Combat</strong><br>
   <em>Dungeon exploration with active combat and UI stats.</em><br>
-  <img src="Insert_Link_To_Action_Screenshot" width="85%">
+  <img src="https://github.com/Gildfx2/Dungeons_And_Dragons/blob/58b743a6c1c9058290b3737aef81cd3fd312fe2c/gameplay_img.png" width="85%">
 </p>
 
 ## 🚀 How to Run
