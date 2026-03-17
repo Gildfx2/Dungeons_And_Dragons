@@ -41,10 +41,19 @@ The presentation layer translates the backend logic into a visually engaging exp
 
 ## 📸 Screenshots
 
-| Main Menu | Gameplay & Combat |
-| :---: | :---: |
-| ![Main Menu Placeholder](https://github.com/Gildfx2/Dungeons_And_Dragons/blob/1104b6aa1ff845b4cccba5e96fd9fe035ee5889f/main_menu_img.png) | ![Gameplay Placeholder](https://github.com/Gildfx2/Dungeons_And_Dragons/blob/f780163c22543d0e1f0b976c70450f8e722c67c9/gameplay_img.png) |
-| *Hero selection screen with class details.* | *Dungeon exploration with active combat and UI stats.* |
+<p align="center">
+  <strong>Main Menu</strong><br>
+  <em>Hero selection screen with class details.</em><br>
+  <img src="Insert_Link_To_Main_Menu_Screenshot" width="85%">
+</p>
+
+<br>
+
+<p align="center">
+  <strong>Gameplay & Combat</strong><br>
+  <em>Dungeon exploration with active combat and UI stats.</em><br>
+  <img src="Insert_Link_To_Action_Screenshot" width="85%">
+</p>
 
 ## 🚀 How to Run
 
